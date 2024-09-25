@@ -1,5 +1,7 @@
 # EX01 Developing a Simple Webserver
-## Date:
+## NAME:T.DANUSH REDDY
+# REGISTER NO:212223040029
+# Date:25-09-2024
 
 ## AIM:
 To develop a simple webserver to serve html pages and display the configuration details of laptop.
@@ -21,6 +23,65 @@ Serving the HTML pages.
 Testing the webserver.
 
 ## PROGRAM:
+<title> Software Companies Revenue </title>
+     <body>
+           <table border = "2" cellspacing = "10" cellpading = "6">
+              <caption>TOP SIX REVENUE SOFTWARE COMPANIES </caption>
+              <tr>
+                  <th>S.NO</th>
+                  <th>COMPANY</th>			
+                  <th>REVENUE</th>
+              </tr>
+              <tr>
+                  <td>1</td>
+                  <td>Microsoft</td>
+                  <td>65 Billion</td>
+             </tr>
+             <tr>
+                  <td>2</td>
+                  <td>Oracle</td>
+                  <td>29.6 Billion</td>
+             </tr>
+             <tr>
+                  <td>3</td>
+                  <td>IBM</td>
+                  <td>29.1Billion</td>
+            </tr>
+            <tr>
+                  <td>4</td>
+                  <td>SAP</td>
+                  <td>6.4 Billion</td>
+            </tr>
+            <tr>
+                  <td>5</td>
+                  <td>Symantic</td>
+                  <td>5.6 Billion</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Adobe Inc</td>
+                <td>19.8 Billion</td>
+          </tr>
+           
+            
+        
+
+       </table>
+    </body>
+</html>
+"""
+class myhandler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        print("request received")
+        self.send_response(200)
+        self.send_header('content-type', 'text/html; charset=utf-8')
+        self.end_headers()
+        self.wfile.write(content.encode())
+server_address = ('',8000)
+httpd = HTTPServer(server_address,myhandler)
+print("my webserver is running...")
+httpd.serve_forever()
+
 
 
 ## OUTPUT:
