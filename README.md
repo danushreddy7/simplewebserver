@@ -87,6 +87,8 @@ httpd.serve_forever()
 
 
 ## OUTPUT:
+![image](https://github.com/user-attachments/assets/6d01ddfd-c7d8-44ed-b8dd-5f7fe1d31781)
+
 
 
 ## RESULT:
