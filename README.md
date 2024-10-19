@@ -23,54 +23,57 @@ Serving the HTML pages.
 Testing the webserver.
 
 ## PROGRAM:
+....
+from http.server import HTTPServer, BaseHTTPRequestHandler
+content = """
+<!DOCTYPE html>
 <html>
-     
-     <title> Software Companies Revenue </title>
-     <body>
-           <table border = "2" cellspacing = "10" cellpading = "6">
-              <caption>TOP SIX REVENUE SOFTWARE COMPANIES </caption>
-              <tr>
-                  <th>S.NO</th>
-                  <th>COMPANY</th>			
-                  <th>REVENUE</th>
-              </tr>
-              <tr>
-                  <td>1</td>
-                  <td>Microsoft</td>
-                  <td>65 Billion</td>
-             </tr>
-             <tr>
-                  <td>2</td>
-                  <td>Oracle</td>
-                  <td>29.6 Billion</td>
-             </tr>
-             <tr>
-                  <td>3</td>
-                  <td>IBM</td>
-                  <td>29.1Billion</td>
-            </tr>
-            <tr>
-                  <td>4</td>
-                  <td>SAP</td>
-                  <td>6.4 Billion</td>
-            </tr>
-            <tr>
-                  <td>5</td>
-                  <td>Symantic</td>
-                  <td>5.6 Billion</td>
-            </tr>
-            <tr>
-                <td>6</td>
-                <td>Adobe Inc</td>
-                <td>19.8 Billion</td>
-          </tr>
-           
-            
-        
+<head>
+<title>Software Companies</title>
+</head>
+<body bgcolor="cyan">
+<table border="4" cellspacing="1" cellpadling="1" height="300" width="700" bgcolor="white">
+<caption>TOP SOFTWARE COMPANIES WITH REVENUE</caption>
+		<tr>
+			<th>COMPANY</th>
+			<th>REVENUE</th>
+			<th>PERCENTAGE</th>
+		</tr>
+		<tr>
+			<td>Google</td>
+			<td>4541397</td>
+			<td>1</td>
+		</tr>
 
-       </table>
-    </body>
+		<tr>
+			<td>Meta</td>
+			<td>3216464</td>
+			<td>2</td>
+		</tr>
+
+		<tr>
+			<td>SAMSUNG</td>
+			<td>1649465</td>
+			<td>3</td>
+		</tr>
+                 <tr>
+			<td>TCS</td>
+			<td>51918518</td>
+			<td>4</td>
+		</tr>
+
+                 <tr>
+			<td>Infosys</td>
+			<td>5191587</td>
+			<td>5</td>
+		</tr>
+
+
+
+	</table>
+</body>
 </html>
+
 """
 class myhandler(BaseHTTPRequestHandler):
     def do_GET(self):
@@ -83,11 +86,13 @@ server_address = ('',8000)
 httpd = HTTPServer(server_address,myhandler)
 print("my webserver is running...")
 httpd.serve_forever()
+.....
 
 
 
 ## OUTPUT:
-![image](https://github.com/user-attachments/assets/6d01ddfd-c7d8-44ed-b8dd-5f7fe1d31781)
+![image](https://github.com/user-attachments/assets/c750e445-65ba-4198-bf03-07fca2b02e52)
+
 
 
 
